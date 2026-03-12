@@ -11,6 +11,8 @@ mongoose
     console.log(`Error in connecting to mongo db => ${e}`);
   });
 
+const PORT = process.env.PORT || 3000
+
 const app = express();
 app.listen(process.env.PORT, () => {
   console.log(`SERVER STARTED AT PORT = ${process.env.PORT}`);
@@ -166,7 +168,7 @@ app.get("/products", async (req, res) => {
   } catch (e) {
     return res.status(500).json({
       status: "Internal Server Error",
-      error: e,
+      error: e.toString(),
     });
   }
 });
