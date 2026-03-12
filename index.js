@@ -14,8 +14,8 @@ mongoose
 const PORT = process.env.PORT || 3000
 
 const app = express();
-app.listen(process.env.PORT, () => {
-  console.log(`SERVER STARTED AT PORT = ${process.env.PORT}`);
+app.listen(PORT, () => {
+  console.log(`SERVER STARTED AT PORT = ${PORT}`);
 });
 app.use(express.json());
 
